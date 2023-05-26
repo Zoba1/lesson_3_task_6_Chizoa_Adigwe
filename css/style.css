@@ -57,8 +57,6 @@ table {
 	color: aliceblue;
 	display: flex;
 	flex-direction: column;
-	/* flex: 1; */
-	/* border-radius: 100%; */
 }
 
 header {
