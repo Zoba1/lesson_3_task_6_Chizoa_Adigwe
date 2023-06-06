@@ -51,9 +51,20 @@ table {
 
 
 /* Write your css below here */
+
+*{
+	box-sizing: border-box;
+}
+
+.container-1 {
+	width: 100%;
+	margin: 0 auto;
+}
+
 .container{
 	/* background-color: gray; */
 	min-height: 100vh;
+	width: 100%;
 	color: aliceblue;
 	display: flex;
 	flex-direction: column;
@@ -69,18 +80,20 @@ header {
 	
 }
 
-/* .introduction {
-	border-radius: 100%;
-	width: 500px;
-	height: 500px;
-	background-color: lightskyblue;
-
-} */
-
 img {
-	width: 70%;
-	height: 70%;
+	width: 100%;
+	height: 100%;
 	border-radius: 100%;
+	padding: 0 60px;
+	border-style: dotted black;
+	box-shadow: 10px inset crimson;
+}
+
+img:hover {
+	background-color: black;
+	animation-direction: reverse;
+	border: inset;
+	box-shadow: transparent;
 }
 
 a {
@@ -90,6 +103,11 @@ a {
  color: black;
 }
 
+.icon-sidebar {
+      display: none;
+
+}
+
 a:hover {
 	text-decoration: underline;
 	color: purple;
@@ -97,11 +115,11 @@ a:hover {
 
 main {
 	display: grid;
-	grid-template-columns: 1fr ;
+	grid-template-columns: 1fr 1fr ;
 	grid-gap: 12px;
 	flex: 1;
-	padding-right: 50px;
-	margin-top: 50px;
+	padding: 10px;
+	color: black;
 }
 
 h3 {
@@ -118,10 +136,11 @@ h1 {
 }
 
 h2 {
-	color: whitesmoke;
+	color: red;
 	font-size: larger;
 	font-style: italic;
 	padding-left: 20px;
+	width: 100%;
 }
 
 footer {
@@ -129,14 +148,46 @@ footer {
 	padding: 12px 10px;
 	text-align: center;
 	color: black;
-	
+	width: 100%;
 }
 
 
-@media screen and (width >= 600px) {
-	main {
-	background-color: black;
-	grid-template-columns: 1fr 1fr;
+@media screen and (width <= 899px) {
+	.content {
+	background-color: grey;
+	display: grid;
+	grid-template-columns: 1fr;
 
+	}
+
+	.img-wrapper {
+		width: 100%;
+		height: 400px;
+		display: flex;
+        background-color: black;	
+		justify-content: center;
+		align-items: center;
+	}
+
+	.name-wrapper {
+		display: none;
+	}
+}
+
+@media screen and (width <= 600px) {
+	.head-right {
+		display: none;
+	}
+
+	.icon-sidebar {
+		display: contents;
+	}
+	
+}
+
+@media screen and (width <= 400px) {
+	img {
+		height: 60%;
+		margin: auto;
 	}
 }
